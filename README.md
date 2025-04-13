@@ -6,7 +6,7 @@ MoodMuse is a simple web app that uses OpenAI's GPT model to detect the mood of 
 
 ## 📽️ Demo Video
 
-Watch the live demo on YouTube: [Your YouTube Link Here](https://www.youtube.com)
+Watch the live demo on YouTube: https://youtu.be/_TlmVxajS8A
 
 ---
 
