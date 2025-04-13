@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ask GPT</title>
+</head>
+<body>
+  <h2>Ask GPT</h2>
+  <input type="text" id="prompt" placeholder="Ask something..." />
+  <button onclick="ask()">Send</button>
+  <p id="response"></p>
+
+  <script>
+    async function ask() {
+      const prompt = document.getElementById('prompt').value;
+      const res = await fetch('http://localhost:5000/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt })
+      });
+
+      const data = await res.json();
+      document.getElementById('response').innerText = data.reply || data.error;
+    }
+  </script>
+</body>
+</html>
